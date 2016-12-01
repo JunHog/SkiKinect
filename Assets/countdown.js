@@ -10,7 +10,7 @@ var gt: GUIText;
 
 function Update () {
 	//t.text = "0";
-	if(timer == 3 && gt.guiText == "0")
+	if(timer == 3 && gt.GetComponent.<GUIText>() == "0")
 		return;
 	
 	timer -= Time.deltaTime; 
