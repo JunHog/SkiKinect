@@ -8,26 +8,23 @@ public class Speedometer : MonoBehaviour {
 
     Vector3 previous;
     float velocity;
-     
+
+
 
     // Use this for initialization
     void Start () {
-	
-	}
+        InvokeRepeating("Launch", 3.0f, 0.7f);
+    }
 
     // Update is called once per frame
-    public IEnumerator Update () {
-        string AddZero;
-        //double speed = GetComponent<Rigidbody>().velocity * 3.6;
-        //speedText.text = speed.ToString("f2") + " Km/H";
+    void Launch() {
+            //double speed = GetComponent<Rigidbody>().velocity * 3.6;
+            //speedText.text = speed.ToString("f2") + " Km/H";
 
-        velocity = ((transform.position - previous).magnitude) / Time.deltaTime;
-        previous = transform.position;
+            velocity = ((transform.position - previous).magnitude) / (Time.deltaTime*100);
+            previous = transform.position;
+            if(velocity<1000)
+                speedText.text =  velocity.ToString("f0") + " Km/H";
+        }
 
-        yield return new WaitForSeconds(1f);
-
-        if (velocity < 10.00) { AddZero = "0"; } else { AddZero = ""; }
-        speedText.text = AddZero + velocity.ToString("f0") + " Km/H";
-
-    }
 }
