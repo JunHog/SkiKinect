@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using System;
 
 public class Timer : MonoBehaviour {
 
@@ -8,9 +10,12 @@ public class Timer : MonoBehaviour {
     private float startTime;
     private bool finnished = false;
     private bool started = false;
+    public float _delay = 2f;
 
-	// Use this for initialization
-	public IEnumerator Start() {
+    public static string finalTime = "";
+
+    // Use this for initialization
+    public IEnumerator Start() {
         yield return new WaitForSeconds(3f);
         started = true;
         startTime = Time.time;
@@ -20,8 +25,10 @@ public class Timer : MonoBehaviour {
     // Update is called once per frame
     void Update () {
         string AddZero;
-        if (finnished)
+        if (finnished) {
+            finalTime = timerText.text;
             return;
+        }
 
         if (started) {
             float t = Time.time - startTime;
@@ -33,8 +40,11 @@ public class Timer : MonoBehaviour {
         }
 	}
 
-    public void Finnished() {
+    public void Finnish() {
         finnished = true;
         timerText.color = Color.yellow;
+        //yield return new WaitForSeconds(_delay);
+        //SceneManager.LoadScene("start-screen-1");
     }
+
 }

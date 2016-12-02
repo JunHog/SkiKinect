@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="Assets\ChangeSceneAfterDelayScript.cs" />
     <Compile Include="Assets\ChangeSceneOnClickScript.cs" />
+    <Compile Include="Assets\ChangeSceneToScore.cs" />
     <Compile Include="Assets\Script\Kinect\KinectImgControllers\DisplayColor.cs" />
     <Compile Include="Assets\Script\Kinect\KinectImgControllers\DisplayDepth.cs" />
     <Compile Include="Assets\Script\Kinect\KinectModelControllers\KinectModelControllerV2.cs" />
@@ -89,9 +90,12 @@
     <Compile Include="Assets\Speedometer.cs" />
     <Compile Include="Assets\Timer.cs" />
     <Compile Include="Assets\WinBox.cs" />
+    <Compile Include="Assets\highscore.cs" />
+    <Compile Include="Assets\menuScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Asset\Shaders\Normal-Diffuse.shader" />
+    <None Include="Assets\Packs\BirchPackVol1\Works For Fun.txt" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />

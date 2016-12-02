@@ -24,7 +24,7 @@ public class Speedometer : MonoBehaviour {
             velocity = ((transform.position - previous).magnitude) / (Time.deltaTime*100);
             previous = transform.position;
             if(velocity<1000)
-                speedText.text =  velocity.ToString("f0") + " Km/H";
+                speedText.text =  velocity.ToString("f0");
         }
 
 }
